@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="spring.teamproject.dabang.domain.manage.RoomInfoRepository">
+  	
+  	<select id="getRoomInfoByRoomcode" parameterType="Integer" resultType="spring.teamproject.dabang.domain.manage.RoomInfo">
+  	SELECT * 
+		FROM salesInfo
+			<!--LEFT JOIN trnscInfo ON salesInfo.room_code = trnscInfo.room_code
+			LEFT JOIN addi_info ON salesInfo.room_code = addi_info.room_code
+			LEFT JOIN detailDesc ON salesInfo.room_code = detailDesc.room_code
+			LEFT JOIN fac_info ON salesInfo.room_code = fac_info.room_code
+			LEFT JOIN photoRegistration ON salesInfo.room_code = photoRegistration.room_code-->
+		WHERE salesInfo.room_code = #{room_code};
+  	</select>
+  	
+
+  	 	
+  	<select id="getRoomListByRoomcode" parameterType="Integer" resultType="spring.teamproject.dabang.domain.manage.RoomInfo">
+  	SELECT 
+  		create_date,
+  		room_code,
+  		trnsc_type,
+  		sales_type,
+  		room_info_count,
+  		sales_address_main_road,
+  		sales_address_dong,
+  		sales_address_ho,
+  		desc_title
+  		
+		FROM 
+			salesInfo
+			
+		WHERE 
+			room_code = #{room_code};
+  	</select>
+  	
+  	<insert id="save" parameterType="spring.teamproject.dabang.domain.manage.RoomInfo"
+  	useGeneratedKeys="true" keyProperty="room_code">
+  	insert into
+		salesInfo 
+	values (
+		0,
+		#{sales_type}, #{unregistered_check}, 
+		#{sales_address_main_road}, #{sales_address_main_jibeon}, #{sales_address_dong}, #{sales_address_ho},
+		#{size_exclusive_p}, #{size_exclusive_m}, #{size_supply_p}, #{size_supply_m},
+		#{room_info_count}, #{room_info_livingroom}, #{room_info_char},
+		#{building_use}, #{building_approval}, #{building_approval_date},
+		
+		#{trnsc_type}, #{deposit_price}, #{monthly_price_deposit}, #{monthly_price},
+		#{public_management}, #{management_fee},
+		#{possible_moved}, #{possible_moved_date}, #{possible_moved_check},
+		
+		#{total_floors}, #{num_floor}, #{num_bathrooms}, #{elevator},
+		#{parking_availability}, #{total_parking},
+		
+		#{fac_heating}, #{fac_aircnd}, #{fac_comm}, #{fac_other}, #{fac_security},
+		
+		#{desc_title}, #{desc_detail}, #{desc_code},
+		
+		#{user_code},
+		now(),
+		now()
+	)
+  	
+  	</insert>
+  	
+  	<insert id="saveFiles" parameterType="java.util.List">
+		insert into
+			salesInfo_file
+		values
+		<foreach collection="list" item="file" separator=",">
+			(	
+				0,
+				#{file.room_code},
+				#{file.photo_filename},
+				now(),
+				now()
+			)
+		</foreach>
+	</insert>
+  	
+  	<update id="updateRoomInfoByRoomcode"
+  	parameterType="spring.teamproject.dabang.domain.manage.RoomInfo">
+  	update
+		salesInfo
+	set
+		sales_type = #{sales_type}, sales_address = #{sales_address}, 
+		sales_size = #{sales_size}, sales_info = #{sales_info}, 
+		building_use = #{building_use}, building_approval = #{building_approval},
+		
+		trnsc_type = #{trnsc_type}, price_info = #{price_info}, 
+		public_admin_fee = #{public_admin_fee}, move_date = #{move_date},
+		
+		num_floors = #{num_floors}, total_floors = #{total_floors}, 
+		num_bathrooms = #{num_bathrooms}, elevator = #{elevator}, 
+		parking_availability = #{parking_availability}, total_parking = #{total_parking},
+		
+		fac_heating = #{fac_heating}, fac_aircnd = #{fac_aircnd}, 
+		fac_comm = #{fac_comm}, fac_other = #{fac_other}, 
+		fac_security = #{fac_security},
+		
+		photo_general = #{photo_general}, photo_filename = #{photo_filename}, 
+		photo_filecode = #{photo_filecode},
+		
+		desc_title = #{desc_title}, desc_detail = #{desc_detail}, 
+		desc_code =#{desc_code},
+		
+		update_date = now()
+	
+	where 
+		room_code = #{room_code}
+  	</update>
+  
+  	<delete id="remove"
+  		parameterType="Integer">
+  	
+  	delete
+  		from salesInfo
+  		where room_code = #{room_code}
+  	
+  	</delete>
+  </mapper>

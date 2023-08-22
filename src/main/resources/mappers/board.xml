@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.teamproject.dabang.domain.board.BoardRepository">
+	<insert id="saveBoard"
+		parameterType="spring.teamproject.dabang.domain.board.Board"
+		useGeneratedKeys="true" keyProperty="notice_code">
+		insert into
+			notice_mst
+		values(
+			0,
+			#{user_code},
+			#{notice_title},
+			#{notice_content},
+			#{notice_nName},
+			now(),
+			now()
+		);
+	</insert>
+	<insert id="saveBoardFiles" parameterType="java.util.List">
+		insert into
+			notice_file
+		values
+		<foreach collection="list" item="file" separator=",">
+			(
+			0,
+			#{file.notice_code},
+			#{file.file_name},
+			now(),
+			now()
+			)
+		</foreach>
+	</insert>
+
+	<select id="getBoard" parameterType="Integer"
+		resultType="spring.teamproject.dabang.domain.board.Board">
+		SELECT
+			notice_title,
+			notice_content,
+			notice_nName,
+			create_date
+		FROM
+			notice_mst
+		where
+			user_code = #{user_code}
+	</select>
+	<update
+		parameterType="spring.teamproject.dabang.domain.board.Board"
+		id="updateBoardByBoardCode">
+		UPDATE
+		notice_mst
+		SET
+		notice_content = #{notice_content},
+		update_date = now()
+		WHERE
+		user_code = #{user_code}
+	</update>
+
+	<delete id="remove" parameterType="Integer">
+		DELETE FROM
+		notice_mst
+		WHERE
+		user_code = #{user_code}
+	</delete>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

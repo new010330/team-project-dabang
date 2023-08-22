@@ -1,0 +1,83 @@
+.middle {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 10px;
+}
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 4px;
+    margin: 0 15px;
+}
+
+.slider>.track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.slider>.range {
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #326cf9;
+}
+
+.slider>.thumb {
+    position: absolute;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.slider>.thumb.left {
+    left: 0%;
+    transform: translate(-15px, -10px);
+    box-shadow: rgba(157, 157, 157, 0.2) 0px 2px 5px 0px;
+    border: 1px solid rgb(237, 237, 237);
+}
+
+.slider>.thumb.right {
+    right: 0%;
+    transform: translate(15px, -10px);
+    box-shadow: rgba(157, 157, 157, 0.2) 0px 2px 5px 0px;
+    border: 1px solid rgb(237, 237, 237);
+}
+
+input[type="range"] {
+    position: absolute;
+    /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+    pointer-events: none;
+    /* -webkit-appearance: none; */
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: default;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+}

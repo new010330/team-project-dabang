@@ -1,0 +1,193 @@
+/* 헤더 스타일 */
+
+  
+/* 전역 스타일 */
+
+.Title {
+  margin: 120px 0px 64px;
+  font-size: 46px;
+  line-height: 70px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.wrapping {
+	font-family: Arial, sans-serif;
+	background-color: #fff;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+  
+.Content {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MenuBar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.MenuBar a {
+  flex: 0 0 auto;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 32%;
+  height: 70px;
+  color: rgb(34, 34, 34);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  border: 1px solid rgb(237, 237, 237);
+}
+
+.MenuBar a.active {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+table {
+  width: 69%;
+  border-collapse: collapse;
+}
+  
+  
+
+table tr {
+  border-top: 1px solid rgb(237, 237, 237);
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+table td {
+  padding: 23px;
+}
+
+
+
+
+
+
+
+.react-color, .react-color span {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+/* 콘텐츠 스타일 */
+.ContentBody {
+  margin-bottom: 100px;
+
+}
+
+
+.ContentScript2{
+  flex: 0 0 auto;
+  padding-left: 270px;
+  padding-top: 150px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+
+
+table td {
+  padding: 10px;
+
+}
+
+.board-inquery,
+.board-title,
+.board-inquery-contents,
+.board-photo {
+
+  width: 15%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.board-category {
+  border: 1px solid rgb(237, 237, 237);
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  margin-top: 5px;
+  
+}
+
+.title-content{
+  border: 1px solid rgb(237, 237, 237);
+  width: 100%;
+  height: 50px;
+
+}
+.inquery-content {
+  border: 1px solid rgb(237, 237, 237);
+  width: 100%;
+  padding: 5px;
+  height: 300px;
+  margin-top: 5px;
+  resize: vertical;
+}
+
+.board-content p {
+  margin-bottom: 10px;
+}
+
+.Inquery {
+  border: 0px;
+  border-radius: 2px;
+  background-color: rgb(50, 108, 249);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 44px;
+  text-align: center;
+  align-content: center;
+
+  cursor: pointer;
+}
+
+.board-content2{
+  text-align: center;
+}
+.customer-center{
+  font-size: 20px;
+  font-weight: 200;
+}
+.period-time{
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.content-footer{
+  border: 1px solid rgb(237, 237, 237);
+  width: 70%;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 200px;
+}
+
+.notice-file{
+  height: 100px;
+}

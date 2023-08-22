@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+    font-weight: 700;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+select, input, textarea, a {
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+    color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+    border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+}
+
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+button {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html::-webkit-scrollbar {
+    
+    width: 16px;
+    height: 10px;
+}
+
+html {
+	overflow-x: scroll; /* 가로 스크롤 사용 */
+    overflow-y: scroll; /* 세로 스크롤 사용 */
+}
+
+html::-webkit-scrollbar-thumb {
+    background:rgba(222, 219, 219, 0.953); /* 스크롤바 막대 색상 */
+    border: 4px solid rgb(255, 255, 255); /* 스크롤바 막대 테두리 설정  */
+    border-radius: 12px 12px 12px 12px;
+}
+
+html::-webkit-scrollbar-track{
+	background-color: rgb(255, 255, 255); /* 스크롤바 뒷 배경을 투명 처리한다 */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background-color:#a0a0a5;
+}
+
+#join-body {
+    -webkit-box-flex: 1;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-width: 1200px;
+    min-height: 100%;
+    position: relative;
+}
+
+.JoinContainer {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 100px 0px 126px;
+}
+
+.JoinContainer > div {
+    width: 476px;
+    margin: 0px auto;
+    border: 1px solid rgb(245, 245, 245);
+}
+
+.Join-ViewBox {
+    transition: padding 250ms ease-in-out 0s;
+    padding: 68px;
+}
+
+.Join-Header {
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.Join-Header h1 {
+    color: rgb(34, 34, 34);
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.welcome-Text {
+    padding-top: 28px;
+}
+
+.welcome-Text > p {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.Check-Container {
+    padding-top: 40px;
+}
+
+.Check-All {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 2px;
+    cursor: pointer;
+    outline: none !important;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    background: #fbfbfb;
+}
+
+input[type="checkbox"]::before {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: scale(0) translate(-50%, -50%);
+    line-height: 1;
+}
+
+input[type="checkbox"]:hover {
+    border-color: rgba(170, 170, 170, 0.5);
+}
+
+input[type="checkbox"]:checked {
+    background-color: #1d68f5;
+    /* border-color: rgba(255, 255, 255, 0.3); */
+    color: white;
+}
+
+input[type="checkbox"]:checked::before {
+    border-radius: 2px;
+    transform: scale(1) translate(-50%, -50%)
+}
+
+
+/* .Check-Box, .Check-ListBox:checked::after{
+    display: block;
+} */
+
+.TextContent {
+    padding-left: 4px;
+    color:  rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.Check-List {
+    margin-top: 16px;
+    padding: 8px 0px;
+    border-top: 1px solid rgb(245, 245, 245);
+}
+
+.Check-List > li {
+    display: grid;
+    -webkit-box-align: center;
+    align-items: center;
+    grid-template-columns: 1fr 40px;
+    padding: 8px 0px;
+}
+
+.Check-Lists {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.Check-TextContent {
+    padding-left: 4px;
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.Check-List > li > a {
+    display: block;
+    height: 24px;
+    text-align: right;
+}
+
+.warning-Text {
+    color: rgb(151, 151, 151);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.warning-Text-a {
+    color: rgb(50, 108, 249);
+}
+
+.BtnWrap {
+    margin-top: 36px;
+}
+
+
+.JoinBtn:disabled {
+    background-color: rgb(223, 223, 223);
+    cursor: default;
+}
+
+.JoinBtn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 16px;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 2px;
+    transition: all 150ms ease-out 0s;
+    cursor: pointer;
+    height: 56px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    background-color: rgb(50, 108, 249);    
+}
+
+.JoinBtn-text {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+button > span {
+    position: relative;
+}

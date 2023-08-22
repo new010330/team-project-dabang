@@ -1,0 +1,335 @@
+#body {
+    width: 100%;
+    height: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root, *, body {
+    font-family: "Pretendard Variable", -apple-system, system-ui, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+body {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+body {
+    line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+    font-weight: 700;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+select, input, textarea, a {
+    outline: none;
+}
+
+textarea, input {
+    appearance: none;
+}
+
+#content {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-width: 1200px;
+    min-height: 100%;
+    position: relative;
+}
+
+.Email-LoginContainer {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 100px 0px 126px;
+}
+
+.Email-LoginContainer > div {
+    width: 476px;
+    margin: 0px auto;
+    border: 1px solid rgb(245, 245, 245);
+}
+
+.Email-ViewBox {
+    transition: padding 250ms ease-in-out 0s;
+    padding: 68px;
+}
+
+.EL-Header {
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.EL-Header > h1 {
+    color: rgb(34, 34, 34);
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.EL-VB-Text {
+    padding-top: 28px;
+}
+
+.EL-VB-Text > p {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.EL-Form {
+    margin-top: 48px;
+}
+
+.EL-container {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.EL-header-2 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.EL-ID-text {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.EL-content {
+    display: flex;
+    width: 100%;
+}
+
+.EL-content > div {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+.input-box {
+    display: block;
+    width: 100%;
+    height: 44px;
+    position: relative;
+}
+
+.Email-input {
+    width: 100%;
+    height: 100%;
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0px 16px;
+    border: 1px solid rgb(237, 237, 237);
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all 150ms ease-out 0s;
+    /* user-select: none; */
+}
+
+.EL-password {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.EL-content {
+    display: flex;
+    width: 100%;
+}
+
+.password-input {
+    width: 100%;
+    height: 100%;
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0px 40px 0px 16px;
+    border: 1px solid rgb(237, 237, 237);
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all 150ms ease-out 0s;
+    /* user-select: none; */
+}
+
+.RightIcon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.SolidBtn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 16px;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 2px;
+    transition: all 150ms ease-out 0s;
+    cursor: pointer;
+    height: 56px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    background-color: rgb(50, 108, 249);
+}
+
+.Btn-text {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+button > span {
+    position: relative;
+}
+
+.Btn-wrap {
+    display: grid;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    grid-template-columns: auto 1px auto;
+    margin-top: 28px;
+    gap: 0px 24px;
+    text-align: center;
+}
+
+.SolidBtn:hover{
+	background-color: rgb(6 58 184);
+}
+
+.Btn-wrap > button {
+    padding: 0px;
+    color: rgb(151, 151, 151);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    border: 0px;
+    background-color: transparent;
+}
+
+.Btn-wrap > div {
+    width: 1px;
+    height: 12px;
+    background-color: rgb(237, 237, 237);
+}
+
+.error-checks {
+
+    max-height: 100%;
+    padding: 8px;
+    overflow: hidden;
+    position: fixed;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 9000;
+    top: 0px;
+    right: 0px;
+    display: flex; /* Add this line to make the elements inside display inline */
+}
+
+.error-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    min-height: 40px;
+    justify-content: center;
+    padding: 12px 8px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: rgba(208, 2, 27, 0.9);
+    position: relative;
+    overflow: hidden;
+}
+
+.emailerror {
+    -webkit-box-flex: 1;
+    flex: 1 0 0px; 
+    min-height: 40px;
+    padding: 8px 80px;
+    color: rgb(208, 2, 27);
+    font-size: 15px;
+    line-height: 24px;
+    white-space: pre-wrap;/*  */
+    background-color: rgba(208, 2, 27, 0.15);
+}

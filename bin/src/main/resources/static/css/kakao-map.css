@@ -1,0 +1,60 @@
+.map_wrap {
+<<<<<<< HEAD
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height: 100%;
+=======
+    width: 100%;
+    height: 100%;
+    position: relative;
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+}
+
+.custom_zoomcontrol {
+    position:absolute;
+    top:50px;
+    right:10px;
+<<<<<<< HEAD
+    width:36px;
+=======
+    width:40px;
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+    height:80px;
+    overflow:
+    hidden;z-index:1;
+    background-color:#f5f5f5;
+}
+
+.custom_zoomcontrol span {
+<<<<<<< HEAD
+    display:block;
+    width:36px;
+    height:40px;
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:38px;
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+    text-align:center;
+    cursor:pointer;
+}
+
+.custom_zoomcontrol span img {
+<<<<<<< HEAD
+    width:15px;
+    height:15px;
+    padding:12px 0;
+=======
+
+    width: 12px;
+    height: 12px;
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+    border:none;
+}
+
+.custom_zoomcontrol span:first-child{
+    border-bottom:1px solid #bfbfbf;
+} 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최근 본 방</title>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/recentList.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <th:block th:replace="/fragments/header"></th:block>
+    
+    <div>
+        <header class="recentListHeader">
+            <div class="recentListHeaderDiv">
+                <h1 class="recentListHeader-h1">관심목록</h1>
+                <ul class="recntListHeader-ul">
+                    <li>
+                        <a aria-current="page" class="active" href="#">최근 본 방</a>
+                    </li>
+                        
+                    <li>
+                        <a href="#">찜한 방</a>
+                    </li>
+                    <li>
+                        <a href="#">최근 본 단지</a>
+                    </li>
+                    <li>
+                        <a href="#">찜한 단지</a>
+                    </li>
+                    <li>
+                        <a href="#">즐겨찾기</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="mainDiv">
+            <div class="mainContentDiv">
+                <div class="listHeaderDiv">
+                    <p class="listHedaerText">
+                        총
+                        <span class="listHeaderSpan">
+                            4개
+                        </span>
+                        의 최근 본 방이 있습니다.
+                    </p>
+                    <p class="listHeaderNotice">최근 본 방은 최대 50개까지 저장됩니다.</p>
+                </div>
+                <ul class="listMainUl">
+                    <li class="listMainLi">
+                        <div class="listMainContentDiv">
+                            <a href="/sign/S-gKAL-11260102-3961" target="_blank" 
+                            rel="noopener noreferrer" class="listMainContentAtag">
+                                <div class="listMainContent-imgDiv">
+                                    <div class="listMainContent-img">
+                                        <img src="https://dabang-prod-sign-image.s3.ap-northeast-2.amazonaws.com/338faeed-7c1e-4fb7-911a-8b83c797d547" 
+                                        width="60" height="60" alt="매물 사진" draggable="false" loading="lazy" style="width: 100%; height: 100%;">
+                                        <div class="listMainContent-imgCover cover"></div>
+                                    </div>
+                                </div>
+                                <div class="contentTextDiv">
+                                    <p class="contentTextHead">쓰리룸 이상</p>
+                                    <h1 class="contentTextTitle">월세 3500/100</h1>
+                                    <p class="contentTextMemo">3층, 52.27m², 관리비 6만</p>
+                                    <p class="contentTextMemo">상봉역 도보 2분거리. 쓰리룸 월세. 즉시 입주</p>
+                                    <div class="contentTextLow"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,369 @@
+.content{
+    height: 500px;
+    background: linear-gradient(134deg, rgb(19, 183, 207) -5%, rgb(54, 91, 180) 56%, rgb(54, 91, 180) 56%);
+}
+
+select, input, textarea, a {
+    outline: none;
+}
+
+form {
+    display: block;
+    width: 1200px;
+    height: 72px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+
+    font-weight: 400;
+    /* background: linear-gradient(134deg, rgb(19, 183, 207) -5%, rgb(54, 91, 180) 56%, rgb(54, 91, 180) 56%); */
+}
+
+.header-box-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 1px;
+
+    white-space: nowrap;
+}
+
+.right-header-line{
+	flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+.right-header-line a {
+    width: 100%;
+    color: #ffffffcc;
+}
+
+.right-header-line a:hover {
+    color: rgb(255, 255, 255);
+    /* font-weight: 700; */
+}
+
+.right-header-line > .menu-item:nth-child(n+2) {
+    margin-left: 40px;
+}
+
+.right-header-line .menu-item:last-child {
+    margin-left: 8px;
+}
+
+.auth-items {
+    margin-left: 40px;
+}
+
+.login-page-button, .last-button {
+    width: 155px;
+    height: 40px;
+    
+    color: white;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 2px;
+    
+    background: rgb(54, 91, 180) 56%;
+}
+
+.right-header-line .menu-item:nth-child(n+7):hover {
+    color: rgb(255, 255, 255);
+    background-color: #ffffff33;
+}
+
+.button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.button-text span {
+    margin-left: 14px;
+    margin-right: 14px;
+
+    color: #dfdfdf;
+}
+
+.Profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50%;
+    user-select: none;
+    margin-left: 40px;
+    position: relative;
+}
+
+.Profile img {
+    width: 32px;
+    height: 32px;
+
+    position: relative;
+}
+
+
+.user-option p{
+	background: none;
+	color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+
+.user-option-box {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: calc(59% - 1px);
+    transform: translateX(-50%);
+    z-index: 11;
+}
+
+.user-option-box::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(205, 205, 205) transparent transparent rgb(205, 205, 205);
+    background-color: rgb(255, 255, 255);
+    transform: translateY(2px) rotate(45deg);
+
+    z-index: 11;
+    position: relative;
+}
+
+.user-option-box > nav {
+    width: 240px;
+
+    position: absolute;
+    top: calc(100% - 5px);
+    right: -40px;
+    z-index: 9;
+
+    border: 0px solid rgb(205, 205, 205);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 18px -10px;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.user-service-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 100%;
+    padding: 0px 16px;
+    color: #4c4c4c !important;
+    font-size: 14px;
+    line-height: 20px;
+    height: 56px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+.logout-button {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px 16px;
+    color: rgb(76, 76, 76);
+    font-size: 14px;
+    line-height: 20px;
+    height: 55px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.logout-button > svg {
+    width: 17px;
+    height: 15px;
+    margin-left: auto;
+}
+
+
+.header-box {
+    width: 1200px;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.header-box > div {
+    width: 100%;
+}
+
+.header-box > div > h1{
+    margin-top: 85px;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.wap-Tab {
+    display: flex;
+    height: 30px;
+    margin: 40px 0px 20px;
+}
+
+.wap-Tab > p {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    user-select: none;
+}
+
+.wap-Tab p + p {
+    margin-left: 24px;
+}
+
+.wap-Tab-Btn1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.wap-Tab-Btn1 {
+    opacity: 1;
+}
+
+.wap-Tab-Btn2{
+    opacity: 0.5;
+}
+
+.wap-input{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    padding: 0px 40px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 15px -2px;
+    background-color: rgb(255, 255, 255);
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+.wap-input{
+	width: 1180px;
+    height: 72px;
+}
+
+.wap-input > input {
+    flex: 1 1 0%;
+    height: 27px;
+    margin-left: 20px;
+    font-size: 18px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.recommend-desc {
+    display: flex;
+    height: 36px;
+    line-height: 24px;
+}
+
+.recommend-desc p:nth-child(1) {
+    font-size: 24px;
+}
+
+.recommend-desc p:nth-child(2) {
+    font-size: 13px;
+    margin-left: 8px;
+    color: rgb(134, 134, 134);
+    font-size: 13px;
+}
+
+.recommend-desc strong {
+    font-size: 24px;
+}
+
+.room-list-container {
+    width: 100%;
+    margin: 100px 0px 160px;
+}
+
+.recommend-room-line {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.room-data-list {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.room-data {
+    cursor: pointer;
+}
+
+.room-img img {
+    width: 280px;
+    height: 186px;
+}
+
+.recommend-room-box {
+    margin-top: 20px;
+}
+
+.recommend-room-box p:nth-child(n+2) {
+    font-size: 14px;
+}
+
+.room-text {
+    margin-bottom: 4px;
+    color: rgb(34, 34, 34);
+    font-size: 13px;
+    line-height: 19px;
+}
+
+
+.recommend-room-box h1 {
+    margin-bottom: 4px;
+    color: rgb(34, 34, 34);
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.Footer-List {
+     width: 747px;
+}

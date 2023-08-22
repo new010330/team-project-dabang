@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="spring.teamproject.dabang.domain.user.UserRepository">
+  	<insert id="save" parameterType="spring.teamproject.dabang.domain.user.User">
+  		insert into
+  			user_mst
+  		values(
+  			0,
+  			#{user_email},
+  			#{user_password},
+  			#{user_checkpassword},
+  			#{user_roles},
+  			#{user_provider},
+  			now(),
+  			now()
+  		)
+  	</insert>
+  
+  </mapper>

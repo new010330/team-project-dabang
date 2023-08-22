@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/account.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <th:block th:replace="/fragments/header"></th:block>
+    <div class="wrapping">
+        <nav class="Header">
+            <div>
+                <h1 class="Title">MY 다방</h1>
+                <div class="MenuBar">
+                    <a href="/user/sms">문자문의</a>
+                    <a href="/user/call">전화문의</a>
+                    <a href="/inquery">1:1 문의내역</a>
+                    <a href="/user/report">허위매물 신고내역</a>
+                    <a href="/account" class="react-color"><span>내 정보</span></a>
+                </div>
+            </div>
+        </nav>
+        <div class="Content">
+            <div>
+                <table>
+                    <tr>
+                        <td class="colspan-2" colspan="2"><img class="profile" src="/static/images/login.PNG"
+                                width="100"></td>
+                    </tr>
+                    <tr>
+                        <td class="socialAccount">
+                            <h1>연결된 소셜계정</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nickName">
+                            <h1>닉네임</h1>
+                        </td>
+                        <td class="nickNameAnswer">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="phoneNumber">
+                            <h1>휴대폰번호</h1>
+                        </td>
+                        <td class="phoneNumberAnswer">
+                            <p>인증을 진행해주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan-2" colspan="2">회원탈퇴</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="/static/js/board/account.js"></script>
+    <script type="text/javascript" src="/static/js/header.js"></script>
+</body>
+
+</html>

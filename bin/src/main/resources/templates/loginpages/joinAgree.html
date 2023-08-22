@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinAgreePage</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/loginpages/joinAgree.css">
+</head>
+
+<body>
+    <div id="join-body">
+        <nav>
+
+        </nav>
+        <section class="JoinContainer">
+            <div class="Join-ViewBox">
+                <form action="/" method="POST" id="JoinAgree-form">
+                    <header class="Join-Header">
+                        <h1>약관 동의</h1>
+                    </header>
+                    <div class="welcome-Text">
+                        <p>환영합니다! 다방 서비스 이용약관에 동의해주세요.</p>
+                    </div>
+                    <div class="Check-Container">
+                        <label class="Check-All">
+                            <input type="checkbox" class="Check-Box" id="allcheck" name="selectall" value="selectall">
+                            <p class="TextContent">
+                                <b>네, 모두 동의합니다.</b>
+                            </p>
+                        </label>
+                        <ul class="Check-List">
+                            <li class="Check-boxs">
+                                <label class="Check-Lists" for="agecheck">
+                                    <input type="checkbox" class="Check-ListBox" id="agecheck" value="agecheck">
+                                    <p class="Check-TextContent">[필수] 만 14세 이상입니다.</p>
+                                </label>
+                            </li>
+                            <li class="Check-boxs">
+                                <label class="Check-Lists" for="AcceptanceCheck">
+                                    <input type="checkbox" class="Check-ListBox" id="AcceptanceCheck"
+                                        value="AcceptanceCheck">
+                                    <p class="Check-TextContent">
+                                        [필수] 다방 서비스 이용약관 동의
+                                    </p>
+                                </label>
+                                <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/terms-of-service?only=true"
+                                    target="_blank" rel="noreferrer noopener">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" style="flex: 0 0 auto;">
+                                        <path
+                                            d="M9.15405 6.13901C9.33127 5.96917 9.60104 5.95562 9.79299 6.09473L9.86099 6.15405L15.2073 11.7328L9.84561 16.8613C9.64606 17.0522 9.32956 17.0452 9.13868 16.8456C8.96901 16.6682 8.95572 16.3984 9.09501 16.2066L9.15439 16.1387L13.793 11.702L9.13901 6.84595C8.96917 6.66873 8.95562 6.39896 9.09473 6.20701L9.15405 6.13901Z"
+                                            fill="#656565"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="Check-boxs">
+                                <label class="Check-Lists" for="personalInfo">
+                                    <input type="checkbox" class="Check-ListBox" id="personalInfo" value="personalInfo">
+                                    <p class="Check-TextContent">
+                                        [필수] 개인정보 수집 및 이용 동의
+                                    </p>
+                                </label>
+                                <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/dabang/join/collecting-use-personal"
+                                    target="_blank" rel="noreferrer noopener">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" style="flex: 0 0 auto;">
+                                        <path
+                                            d="M9.15405 6.13901C9.33127 5.96917 9.60104 5.95562 9.79299 6.09473L9.86099 6.15405L15.2073 11.7328L9.84561 16.8613C9.64606 17.0522 9.32956 17.0452 9.13868 16.8456C8.96901 16.6682 8.95572 16.3984 9.09501 16.2066L9.15439 16.1387L13.793 11.702L9.13901 6.84595C8.96917 6.66873 8.95562 6.39896 9.09473 6.20701L9.15405 6.13901Z"
+                                            fill="#656565"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="Check-boxs">
+                                <label class="Check-Lists" for="marketintInfo">
+                                    <input type="checkbox" class="Check-ListBox" id="marketintInfo"
+                                        value="marketintInfo">
+                                    <p class="Check-TextContent">
+                                        [선택] 마케팅 정보 수신에 대한 동의
+                                    </p>
+                                </label>
+                                <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/dabang/marketing"
+                                    target="_blank" rel="noreferrer noopener">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" style="flex: 0 0 auto;">
+                                        <path
+                                            d="M9.15405 6.13901C9.33127 5.96917 9.60104 5.95562 9.79299 6.09473L9.86099 6.15405L15.2073 11.7328L9.84561 16.8613C9.64606 17.0522 9.32956 17.0452 9.13868 16.8456C8.96901 16.6682 8.95572 16.3984 9.09501 16.2066L9.15439 16.1387L13.793 11.702L9.13901 6.84595C8.96917 6.66873 8.95562 6.39896 9.09473 6.20701L9.15405 6.13901Z"
+                                            fill="#656565"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="warning-Text">만 14세 이상 회원 가입 가능합니다.</p>
+                        <p class="warning-Text">
+                            해당 내용은
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/terms-of-service"
+                                target="_blank" rel="noreferrer noopener" class="warning-Text-a">이용약관
+                                및 정책</a>에서도 확인 가능합니다.
+                        </p>
+                    </div>
+                    <div class="BtnWrap">
+                        <button type="button" class="JoinBtn" id="next" disabled>
+                            <span class="JoinBtn-text">동의하고 진행하기</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="/static/js/joinAgree.js"></script>
+</body>
+
+</html>

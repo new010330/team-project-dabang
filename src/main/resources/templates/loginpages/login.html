@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>EmailLogin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/loginpages/emailLogin.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+
+<body>
+    <th:block th:replace="/fragments/header"></th:block>
+    <div id="body">
+        <div id="content">
+            <nav>
+
+            </nav>
+            <section class="Email-LoginContainer">
+                <div class="Email-ViewBox">
+                    <header class="EL-Header">
+                        <h1 class="EL-Header-text">이메일로 로그인</h1>
+                    </header>
+                    <div class="EL-VB-Text">
+                        <p>다방 서비스 이용을 위해 로그인해주세요.</p>
+                    </div>
+                    <form class="EL-Form" method="post" action="/welcome/login">
+                        <div class="EL-container">
+                            <header class="EL-header-2">
+                                <h1 class="EL-ID-text">아이디</h1>
+                            </header>
+                            <div class="EL-content">
+                                <div>
+                                    <div class="input-box">
+                                        <input autocomplete="off" type="text" name="email" placeholder="이메일 주소 입력"
+                                            class="Email-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="EL-container">
+                            <header class="EL-header-2">
+                                <h1 class="EL-password">비밀번호</h1>
+                            </header>
+                            <div class="EL-content">
+                                <div>
+                                    <div class="input-box">
+                                        <input autocomplete="off" type="password" name="password" placeholder="비밀번호 입력"
+                                            class="password-input">
+                                        <button type="button" class="RightIcon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="seeBtn"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <defs>
+                                                    <mask id="Tu4EiZPU-Adg6vA22T9oK">
+                                                        <rect width="100%" height="100%" fill="#ffffff"></rect>
+                                                        <rect x="4.8999" y="4.8999" width="1" height="20" rx="0.5"
+                                                            transform="rotate(-45 4.8999 4.8999)" fill="#000000"></rect>
+                                                    </mask>
+                                                </defs>
+                                                <path
+                                                    d="M2.47461 11.9925C4.07746 8.46725 7.7399 6.00342 12.0016 6.00342C16.2633 6.00342 19.9257 8.46725 21.5286 11.9925C19.9257 15.5178 16.2633 17.9816 12.0016 17.9816C7.7399 17.9816 4.07746 15.5178 2.47461 11.9925ZM12.0023 15.3185C13.9151 15.3185 15.4658 13.8294 15.4658 11.9925C15.4658 10.1556 13.9151 8.66644 12.0023 8.66644C10.0894 8.66644 8.53876 10.1556 8.53876 11.9925C8.53876 13.8294 10.0894 15.3185 12.0023 15.3185ZM12.0019 14.21C13.2771 14.21 14.3109 13.2173 14.3109 11.9927C14.3109 10.7681 13.2771 9.77532 12.0019 9.77532C10.7266 9.77532 9.69284 10.7681 9.69284 11.9927C9.69284 13.2173 10.7266 14.21 12.0019 14.21Z"
+                                                    mask="url(#Tu4EiZPU-Adg6vA22T9oK)" fill="#979797"></path>
+                                                <rect x="4.2002" y="5.6001" width="1" height="20" rx="0.5"
+                                                    transform="rotate(-45 4.2002 5.6001)" fill="#979797"></rect>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="SolidBtn" style="margin-top: 28px;">
+                            <span class="Btn-text">
+                                로그인
+                            </span>
+                        </button>
+                    </form>
+                    <div class="Btn-wrap">
+                        <button>비밀번호 재설정</button>
+                        <div></div>
+                        <button>이메일로 가입하기</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="error-checks">
+            <svg class="error-logo" style="display:none;" width="38" height="16" viewBox="0 0 38 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.6548V0.000250336H7.61038V3.04445H3.0442V7.61063H7.61038V10.6548H0Z" fill="white"></path>
+                <path d="M12.7941 6.08865H9.74985V0.000250336H15.8383V3.04445H12.7941V6.08865Z" fill="white"></path>
+                <path d="M32.5437 6.08865H29.4995V0.000250336H35.5877V3.04445H32.5437V6.08865Z" fill="white"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M24.3269 2.28347V0H27.3711V10.6548H18.9997V0.000250336H22.0439V2.28347H24.3269ZM24.3529 7.61013H22.0699V5.32767H24.3529V7.61013Z"
+                    fill="white"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M29.0495 11.8143C29.0495 14.126 30.9235 16 33.2352 16C35.5469 16 37.4209 14.126 37.4209 11.8143C37.4209 9.5026 35.5469 7.62838 33.2352 7.62838C30.9235 7.62838 29.0495 9.5026 29.0495 11.8143ZM33.2352 13.07C33.0703 13.07 32.907 13.0376 32.7547 12.9745C32.6023 12.9114 32.4639 12.8189 32.3473 12.7023C32.2307 12.5856 32.1382 12.4472 32.0751 12.2949C32.012 12.1425 31.9795 11.9792 31.9795 11.8143C31.9795 11.6494 32.012 11.4861 32.0751 11.3338C32.1382 11.1814 32.2307 11.043 32.3473 10.9264C32.4639 10.8098 32.6023 10.7173 32.7547 10.6542C32.907 10.5911 33.0703 10.5586 33.2352 10.5586C33.5682 10.5586 33.8876 10.6909 34.1231 10.9264C34.3586 11.1619 34.4909 11.4813 34.4909 11.8143C34.4909 12.1474 34.3586 12.4668 34.1231 12.7023C33.8876 12.9377 33.5682 13.07 33.2352 13.07Z"
+                    fill="white"></path>
+            </svg>
+            <div type="error" class="emailerror" style="display: none;">이메일을 입력해주세요.</div>
+            <!-- <div type='error' class="emailerror2" style="display: none;"> 이메일 형식을 확인해주세요.</div> -->
+        </div>
+
+    </div>
+    <footer class="Login-Footer">
+        <div>
+            <div class="Footer-Top">
+                <nav class="Footer-nav">
+                    <ul class="Footer-List">
+                        <li>
+                            <a href="https://www.station3.co.kr" target="_blank" rel="noopener noreferrer"
+                                class="li1">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/terms-of-service"
+                                target="_blank" rel="noopener noreferrer" class="li1">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/dabang/collecting-use-personal"
+                                target="_blank" rel="noopener noreferrer" class="li2">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/rule-of-room-management"
+                                target="_blank" rel="noopener noreferrer" class="li1">매물관리규정</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="Footer-SearchForm">
+                    <div>
+                        <select class="Footer-Search-Select">
+                            <option value="0">일반 매물번호</option>
+                            <option value="1">현장촬영 매울번호</option>
+                        </select>
+                        <input type="text" class="Footer-search-input" value>
+                    </div>
+                    <button type="submit" class="SearchBtn">
+                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z"
+                                stroke="white"></path>
+                            <path d="M12 12L17 17" stroke="white"></path>
+                        </svg>
+                    </button>
+                </form>
+                <button class="GoTop">
+                    <svg width="11" height="7" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 0L0 7H11L5.5 0Z" fill="#D2D6DA"></path>
+                    </svg>
+                    <p>TOP</p>
+                </button>
+            </div>
+            <div class="Content-footer">
+                <div class="info-footer">
+                    <ul class="info-footer-text">
+                        <li>(주)스테이션3</li>
+                        <li>대표 : 유형석</li>
+                        <li>사업자 번호: 220-88-59156 통신판매업신고번호 : 제2013-서울 강남-02884호</li>
+                        <li>주소 : 서울시 서초구 서초대로 301 동익 성봉빌딩 10층 (주)스테이션3</li>
+                        <li></li>
+                        <li>고객센터 : 02-1899-6840 | 평일 10:00 ~ 18:30, 점심시간 : 12:00 ~ 13:00 (토·일요일, 공휴일 휴무)</li>
+                        <li>팩스 : 02-554-9774 프로모션/사업 제휴문의 : biz@station3.co.kr</li>
+                    </ul>
+                    <div class="btn-footer">
+                        <a href="/service/faq" class="btn-footer2">자주묻는 질문</a>
+                        <a href="/service/inquiry">1:1문의</a>
+                        <button class="advertise-Btn">광고문의
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="7" fill="white"></circle>
+                                <path
+                                    d="M4.34378 9.34375L8.93997 4.74756C9.13524 4.55229 9.45182 4.55229 9.64708 4.74756C9.84234 4.94282 9.84234 5.2594 9.64708 5.45466L5.05089 10.0509L4.34378 9.34375Z"
+                                    fill="#326CF9"></path>
+                                <rect x="6.32843" y="4.67139" width="3" height="1" fill="#326CF9"></rect>
+                                <rect x="8.74252" y="8.08545" width="3" height="1"
+                                    transform="rotate(-90 8.74252 8.08545)" fill="#326CF9"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="footer-text">Station3, Inc. All rights reserved.</p>
+                </div>
+                <div class="footer-right-btn">
+                    <div class="footer-right-btns">
+                        <a href="https://www.instagram.com/dabang_app" target="_blank" rel="noopener noreferrer"
+                            class="instar">
+                        </a>
+                        <a href="https://www.facebook.com/dabangapp" target="_blank" rel="noopener noreferrer"
+                            class="facebook">
+                        </a>
+                        <a href="https://blog.naver.com/station3inc" target="_blank" rel="noopener noreferrer"
+                            class="naver-blog">
+                        </a>
+                        <a href="https://post.naver.com/station3inc" target="_blank" rel="noopener noreferrer"
+                            class="naver">
+                        </a>
+                        <a href="https://www.youtube.com/user/DabangApp" target="_blank" rel="noopener noreferrer"
+                            class="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/emailLogin.js"></script>
+</body>
+
+</html>

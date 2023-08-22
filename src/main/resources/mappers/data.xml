@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="spring.teamproject.dabang.domain.manage.RoomDataRepository">
+
+	<select id="readRoomData" parameterType="String" resultType="spring.teamproject.dabang.domain.manage.RoomData">
+		select
+			*
+		from
+			salesInfo
+		where
+			sales_address_main_jibeon LIKE CONCAT('%', #{address},'%');
+	</select>
+	
+
+  	<select id="getAddressInfo" resultType="java.lang.String">
+  		SELECT
+			sales_address_main_jibeon
+		FROM
+			salesInfo
+		WHERE
+			NOT sales_address_main_jibeon IS NULL
+  	</select>
+
+
+</mapper>

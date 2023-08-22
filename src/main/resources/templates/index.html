@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 필수 앱 다방</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="header-box-line">
+                <div class="home-logo-link">
+                    <a href="/index"><img class="site-logo" src="/static/images/home_logo.PNG"></a>
+                </div>
+                <div class="right-header-line">
+                    <a href="/search/map" class="menu-item">지도</a>
+                    <a href="/sales" class="menu-item">분양</a>
+                    <a href="/room/interest" class="menu-item">관심목록</a>
+                    <a href="/manage" class="menu-item">방내놓기</a>
+                    <a href="/alarm" class="menu-item">알림</a>
+                    <a href="" class="menu-item contract">다방싸인 비대면 계약</a>
+                    <div class="auth-items">
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="header-box">
+            <div>
+                <h1>어떤 방을 찾으세요?</h1>
+                <div class="wap-Tab">
+                    <p class="wap-Tab-Btn1">
+                        매물
+                        <!-- ::after -->
+                    </p>
+                    <p class="wap-Tab-Btn2">분양</p>
+                </div>
+            </div>
+            <form>
+                <label class="wap-input">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M0 0H24V24H0z"></path>
+                            <g stroke="#222" stroke-width="2" transform="translate(2 2)">
+                                <circle cx="8" cy="8" r="8"></circle>
+                                <path stroke-linecap="round" d="M15 14L19.95 18.95"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <input placeholder="지역 또는 단지명을 입력하세요">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="room-list-container">
+        <div class="recommend-room-line">
+            <div class="recommend-desc">
+                <p>
+                    <strong>전포동</strong>
+                    추천매물
+                </p>
+                <p>
+                    최근 검색조건으로 추천된 매물입니다.
+                </p>
+            </div>
+            <div class="room-data-list">
+                <div class="room-data">
+                    <div class="room-img">
+                        <img src="/static/images/none_img.jpg">
+                    </div>
+                    <div class="recommend-room-box">
+                        <p class="room-text">오피스텔 · 판도라</p>
+                        <h1>월세 500/48</h1>
+                        <p>2층, 23.17m², 관리비 15만</p>
+                        <p>- 실매물 - 송상현광장 - 신축건물 -</p>
+                    </div>
+                </div>
+                <div class="room-data">
+                    <div class="room-img">
+                        <img src="/static/images/none_img.jpg">
+                    </div>
+                    <div class="recommend-room-box">
+                        <p class="room-text">오피스텔 · 판도라</p>
+                        <h1>월세 500/48</h1>
+                        <p>2층, 23.17m², 관리비 15만</p>
+                        <p>- 실매물 - 송상현광장 - 신축건물 -</p>
+                    </div>
+                </div>
+                <div class="room-data">
+                    <div class="room-img">
+                        <img src="/static/images/none_img.jpg">
+                    </div>
+                    <div class="recommend-room-box">
+                        <p class="room-text">오피스텔 · 판도라</p>
+                        <h1>월세 500/48</h1>
+                        <p>2층, 23.17m², 관리비 15만</p>
+                        <p>- 실매물 - 송상현광장 - 신축건물 -</p>
+                    </div>
+                </div>
+                <div class="room-data">
+                    <div class="room-img">
+                        <img src="/static/images/none_img.jpg">
+                    </div>
+                    <div class="recommend-room-box">
+                        <p class="room-text">오피스텔 · 판도라</p>
+                        <h1>월세 500/48</h1>
+                        <p>2층, 23.17m², 관리비 15만</p>
+                        <p>- 실매물 - 송상현광장 - 신축건물 -</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="Login-Footer">
+        <div>
+            <div class="Footer-Top">
+                <nav class="Footer-nav">
+                    <ul class="Footer-List">
+                        <li>
+                            <a href="https://www.station3.co.kr" target="_blank" rel="noopener noreferrer"
+                                class="li1">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/terms-of-service"
+                                target="_blank" rel="noopener noreferrer" class="li1">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/dabang/collecting-use-personal"
+                                target="_blank" rel="noopener noreferrer" class="li2">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="https://main.d3qjzrynlab66o.amplifyapp.com/terms/common/rule-of-room-management"
+                                target="_blank" rel="noopener noreferrer" class="li1">매물관리규정</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="Footer-SearchForm">
+                    <div>
+                        <select class="Footer-Search-Select">
+                            <option value="0">일반 매물번호</option>
+                            <option value="1">현장촬영 매울번호</option>
+                        </select>
+                        <input type="text" class="Footer-search-input" value>
+                    </div>
+                    <button type="submit" class="SearchBtn">
+                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 14C11.0899 14 14 11.0899 14 7.5C14 3.91015 11.0899 1 7.5 1C3.91015 1 1 3.91015 1 7.5C1 11.0899 3.91015 14 7.5 14Z"
+                                stroke="white"></path>
+                            <path d="M12 12L17 17" stroke="white"></path>
+                        </svg>
+                    </button>
+                </form>
+                <button class="GoTop">
+                    <svg width="11" height="7" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 0L0 7H11L5.5 0Z" fill="#D2D6DA"></path>
+                    </svg>
+                    <p>TOP</p>
+                </button>
+            </div>
+            <div class="Content-footer">
+                <div class="info-footer">
+                    <ul class="info-footer-text">
+                        <li>(주)스테이션3</li>
+                        <li>대표 : 유형석</li>
+                        <li>사업자 번호: 220-88-59156 통신판매업신고번호 : 제2013-서울 강남-02884호</li>
+                        <li>주소 : 서울시 서초구 서초대로 301 동익 성봉빌딩 10층 (주)스테이션3</li>
+                        <li></li>
+                        <li>고객센터 : 02-1899-6840 | 평일 10:00 ~ 18:30, 점심시간 : 12:00 ~ 13:00 (토·일요일, 공휴일 휴무)</li>
+                        <li>팩스 : 02-554-9774 프로모션/사업 제휴문의 : biz@station3.co.kr</li>
+                    </ul>
+                    <div class="btn-footer">
+                        <a href="/service/faq" class="btn-footer2">자주묻는 질문</a>
+                        <a href="/service/inquiry">1:1문의</a>
+                        <button class="advertise-Btn">광고문의
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="7" fill="white"></circle>
+                                <path
+                                    d="M4.34378 9.34375L8.93997 4.74756C9.13524 4.55229 9.45182 4.55229 9.64708 4.74756C9.84234 4.94282 9.84234 5.2594 9.64708 5.45466L5.05089 10.0509L4.34378 9.34375Z"
+                                    fill="#326CF9"></path>
+                                <rect x="6.32843" y="4.67139" width="3" height="1" fill="#326CF9"></rect>
+                                <rect x="8.74252" y="8.08545" width="3" height="1"
+                                    transform="rotate(-90 8.74252 8.08545)" fill="#326CF9"></rect>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="footer-text">Station3, Inc. All rights reserved.</p>
+                </div>
+                <div class="footer-right-btn">
+                    <div class="footer-right-btns">
+                        <a href="https://www.instagram.com/dabang_app" target="_blank" rel="noopener noreferrer"
+                            class="instar">
+                        </a>
+                        <a href="https://www.facebook.com/dabangapp" target="_blank" rel="noopener noreferrer"
+                            class="facebook">
+                        </a>
+                        <a href="https://blog.naver.com/station3inc" target="_blank" rel="noopener noreferrer"
+                            class="naver-blog">
+                        </a>
+                        <a href="https://post.naver.com/station3inc" target="_blank" rel="noopener noreferrer"
+                            class="naver">
+                        </a>
+                        <a href="https://www.youtube.com/user/DabangApp" target="_blank" rel="noopener noreferrer"
+                            class="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/header.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+
+</html>

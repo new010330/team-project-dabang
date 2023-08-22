@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 필수 앱 다방</title>
+        <link rel="stylesheet" href="/static/css/board.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/8cf0887c72.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head> -->
+
+<head>
+
+    <title>Board</title>
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/board.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+</head>
+<body>
+	<th:block th:replace="/fragments/header"></th:block>
+    <div class="wrapping">
+    <nav class="HeaderTitle">
+        <div>
+            <h1 class="Title">문의하기</h1>
+            <div class="MenuBar">
+                <a href="/user/sms"><span>자주 묻는 질문</a>
+                <a href="/user/call" class="react-color"><span>1:1 문의</span></a>
+                <a href="/user/inquiry"><span>공지사항</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="Content">
+        <div class="board-content">
+            <p>다방에 궁금하신 점을 문의해주세요</p>
+            <p>문의하신 내용과 답변은 <span style="color: rgb(50, 108, 249); font-size: 15pt;">'1:1 문의내역'</span> 에서 확인하실 수 있습니다.</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <table>
+            <tr>
+                <td class="board-inquery">문의유형</td>
+                <td>
+                    <select name="type" class="board-category">
+                        <option value=""> 선택 </option>
+                        <option value="useage">서비스 이용문의</option>
+                        <option value="fake-room">허위매물 신고</option>
+                        <option value="complex">단지정보 문의</option>
+                        <option value="etc">기타문의</option>
+                        <option value="failure-error">장애/오류 신고</option>
+                </td>
+            </tr>
+            <form enctype="multipart/form-data">
+                <tr>
+                    <td class="board-title">제목</td>
+
+                    <td>
+                        <textarea name="noticeTitle" placeholder="" class="title-content board-data" ></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="board-inquery-contents">문의내용</td>
+                    <td>
+                        <textarea name="noticeContent" placeholder="" class="inquery-content board-data"></textarea>
+                    </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="board-photo">사진</td>
+                    <td>
+                        <input type="file" class="notice-file" name="file" multiple="multiple" accept=".jpg, .png, .jpeg, .git, .pdf">
+                    </td>
+                </tr>    
+            </form>
+        </table>
+    </div>
+    <div class="board-content2">
+        <button class="Inquery">
+            <span>문의하기</span>
+        </button>
+    </div>
+
+    </div>
+
+    <div class="content-footer">
+        <p class="customer-center">고객센터 : <span style="color: rgb(50, 108, 249); font-size: 13pt; font-weight: 400;">02-1889-6840</span> 
+        <p class="period-time"><span style="color:  rgba(66, 64, 64, 0.644); font-size: 10pt; font-weight: 400;">평일 10:00 ~ 18:30 (토, 일요일, 공휴일 휴무)</span> </p>
+    </div>
+    </div>
+    <script src="/static/js/board/board.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+<<<<<<< HEAD
+
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 16px;
+
+    font-family: 'Pretendard Variable', -apple-system, system-ui, sans-serif;
+}
+
+=======
+    
+    margin: 0px;
+    padding: 0px;
+    
+    font-size: 16px;
+    
+    font-family: 'Pretendard Variable', -apple-system, system-ui, sans-serif;
+}
+
+
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+<<<<<<< HEAD
+
+    cursor: pointer;
+}
+
+button {
+=======
+    
+    cursor: pointer;
+}
+
+button, input {
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0
+    cursor: pointer;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+<<<<<<< HEAD
+@font-face {
+    font-family: 'Pretendard Variable';
+    src: url('../font/pretendard/variable/PretendardVariable.ttf') format('truetype');
+}
+  
+  
+=======
+.hidden {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Pretendard Variable';
+    src: url('../font/pretendard/variable/PretendardVariable.ttf') format('truetype');
+}
+>>>>>>> 6a628feb265ad13ff7da7284ac78200a7df996e0

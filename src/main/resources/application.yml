@@ -1,0 +1,73 @@
+server:
+  port: 8000
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      force-request: true
+      force-response: true
+  tomcat:
+    uri-encoding: UTF-8
+    
+spring:
+#  security:
+#    user:
+#      name: test
+#      password: 1234
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: bcf283702c88974c445ca041bb3d6ad6
+            client-secret:  Mjlzvv3JOqrjnJ3IVkWsqDDNNlddmPuO
+            redirect-uri: http://localhost:8000/login/oauth2/code/kakao
+            authorization-grant-type: authorization_code
+            client-authentication-method: POST
+            client-name: Kakao
+            scope:
+            - profile_nickname
+            - account_email
+            
+          facebook:
+            client-id: 207047455352636
+            client-secret: 85112e45527fd30105fae3088d4cb40f
+            redirect-uri: http://localhost:8000/login/oauth2/code/facebook
+            authorization-grant-type: authorization_code
+            client-authentication-method: POST
+            client-name: Facebook
+            scope: public_profile, email
+            
+
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+          
+          facebook:
+            token-uri: https://graph.facebook.com/oauth/access_token
+            authorization-uri: https://www.facebook.com/dialog/oauth
+            user-info-uri: https://graph.facebook.com/me
+            user-name-attribute: id  
+
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://web1.clm6lpdjfdik.ap-northeast-2.rds.amazonaws.com:3306/dabang?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: admin
+    password: 1q2w3e4r
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+          
+mybatis:
+  mapper-locations:
+  - /mappers/*.xml
+  
+file:
+  path: ${user.home}/dabang_workspace/upload
